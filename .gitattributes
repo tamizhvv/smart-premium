@@ -1,0 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+models/best_model_compressed.pkl filter=lfs diff=lfs merge=lfs -text

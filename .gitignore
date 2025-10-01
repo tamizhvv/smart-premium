@@ -1,0 +1,5 @@
+data/
+mlruns/
+*.tmp
+*.log
+models/best_model.pkl
