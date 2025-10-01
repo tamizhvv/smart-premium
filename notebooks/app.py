@@ -5,9 +5,9 @@ import numpy as np
 import joblib
 import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))   # notebooks/
-MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "best_model.pkl")
-pipe=joblib.load(MODEL_PATH)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # notebooks/
+MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "best_model_compressed.pkl")
+pipe = joblib.load(MODEL_PATH)
 
 st.title('Smart Premium : Insurance Premium Prediction')
 st.header('Enter Customer & Policy Details')
@@ -25,8 +25,8 @@ previous_claims=st.number_input('Previous Claims',min_value=0,max_value=50,value
 #categorical fields
 gender=st.selectbox('Gender',['Male','Female'])
 marital_status=st.selectbox('Marital Status',['Single','Married','Divorced'])
-education=st.selectbox('Education Level',['High School','Bachelor"s','Master"s','PhD'])
-occupation=st.selectbox('Ocuupation',['Employed','Self-Employed','Unemployed'])
+education=st.selectbox('Education Level',['High School','Bachelor\'s','Master\'s','PhD'])
+occupation=st.selectbox('Occupation',['Employed','Self-Employed','Unemployed'])
 location=st.selectbox('Location',['Urban','Suburban','Rural'])
 policy_type=st.selectbox('Policy Type',['Basic','Comprehensive','Premium'])
 smoking_status=st.radio('Smoking Status',['Yes','No'])
